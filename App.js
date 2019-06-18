@@ -14,6 +14,7 @@ import { FlexDimensionsBasicsScreen } from './FlexDimensionsBasics';
 import { PizzaTranslatorScreen } from './TextInputBasics';
 import { TouchBasicsScreen } from './TouchBasics';
 import { TouchAdvancedScreen } from './TouchAdvanced';
+import { ScrollViewScreen } from './ScrollViewScreen';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -47,6 +48,10 @@ class HomeScreen extends React.Component {
           title="Go to Touch Advanced"
           onPress={() => this.props.navigation.navigate("TouchAdvanced")}
         />
+        <Button
+        title="Go to ScrollView"
+        onPress={() => this.props.navigation.navigate("ScrollView")}
+        />
       </View>
     );
   }
@@ -59,7 +64,8 @@ const AppNavigator = createStackNavigator(
     FlexDimensionsBasics: FlexDimensionsBasicsScreen,
     PizzaTranslator: PizzaTranslatorScreen,
     TouchBasics: TouchBasicsScreen,
-    TouchAdvanced: TouchAdvancedScreen
+    TouchAdvanced: TouchAdvancedScreen,
+    ScrollView: ScrollViewScreen,
   },
   {
     initialRouteName: "Home"
